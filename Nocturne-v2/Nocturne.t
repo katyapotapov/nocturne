@@ -3,16 +3,11 @@
 % December 20, 2012
 % Ms. Dyke
 % This program runs a program that allows the user to create their own melodies.
-% There are
 
-% Setting up the screen
-
-% This defines that there are commands from the module "GUI" used in the program, and allows them to be used.
 import GUI
 
 % Declaration Section
 
-% This variable opens the main window of the program, puts it in the centre of the screen and sets the size to 800 by 400 pixels.
 var mainWin := Window.Open ("position:centre;centre,graphics:800;400")
 
 % coordX and coordY define the x and y coordinates of the current pixel the mouse is on; button defines whether or not the mouse button is being pressed.
@@ -21,51 +16,28 @@ var xCoord, yCoord, button : int := 0
 % This variable contains the entire melody that the user inputs.
 var melody : string := ""
 
-% This variable defines the note last entered by the user.
+% These variables define parameters of the note last entered by the user.
 var note : string
-
-% This variable defines the time value of the note last entered by the user.
 var timeValue : string
-
-% This variable defines the time value of the note that the user sees.
 var outputTimeValue : string
-
-% This variable defines the main menu button, which is used in more than one proc.
-var mainMenuButton : int := 0
-
-% This variable determines which octave the last entered note is in.
 var octave : string := ""
+var outputNoteValue : string
 
 % This variable defines any adjustments that need to be made in the melody to define notes in different octaves.
 var octaveValue : string := ""
 
-% This variable defines what the user sees as their last inputted note.
-var outputNoteValue : string
-
-% This variable declares the picture that will be created.
-var pictureID : int
-
-% The next five button variables are declared globally to allow for their deletion in a separate procedure.
-% This variable defines the instructions button.
 var instructionsButton : int := 0
-
-% This variable defines the play melody button.
 var playMelodyButton : int := 0
-
-% This variable
 var quitButton : int := 0
-
 var continueMelodyButton : int := 0
-
 var newMelodyButton : int := 0
+var mainMenuButton : int := 0
 
 const buttonColour : int := 23
-
 var playedMelody : boolean := false
-
 var key : string (1)
-
 var font1 := Font.New ("Adobe Garamond Pro:15")
+var pictureID : int
 
 forward proc mainMenu
 forward proc userInput
